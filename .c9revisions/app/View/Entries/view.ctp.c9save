@@ -1,5 +1,0 @@
-{"ts":1352523739064,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
-{"contributors":[],"silentsave":true,"ts":1352523745713,"patch":[[{"diffs":[[1,"I'm a"]],"start1":0,"start2":0,"length1":0,"length2":5}]],"length":5,"saved":false}
-{"ts":1352523748501,"patch":[[{"diffs":[[0,"I'm a"],[1,"n individual "]],"start1":0,"start2":0,"length1":5,"length2":18}]],"length":18,"saved":false}
-{"ts":1352523751975,"patch":[[{"diffs":[[0,"ividual "],[1,"entriy;"]],"start1":10,"start2":10,"length1":8,"length2":15}]],"length":25,"saved":false}
-{"ts":1352523753446,"patch":[[{"diffs":[[0,"ual entr"],[-1,"i"],[0,"y;"]],"start1":14,"start2":14,"length1":11,"length2":10}]],"length":24,"saved":false}
