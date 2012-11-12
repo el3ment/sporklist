@@ -1,0 +1,187 @@
+html{
+    background:url('../img/creampaper.png');
+}
+
+body{
+    background:transparent;
+    font-family: 'Source Sans Pro', 'Myriad Pro', sans-serif;
+}
+.ad{
+    color:#6e6e6e;
+}
+.ad h2{
+    color: #535353;
+ font-weight:bold;  
+ margin-bottom:.2em;
+ font-size:1.2em
+}
+p{
+ text-indent: 1em;   
+ font-size:.8em;
+ margin-bottom:1em;
+}
+em{
+ font-style:italic;   
+}
+strong{
+ font-weight:bold;   
+}
+
+.logo{
+    font-size: 2.2em;
+}
+.logo .subdomain{
+    color:#4068d7;
+}
+
+#container-header{
+    background: black url('../img/stressed_linen.png');
+    color:white;
+    height:55px;
+    padding:10px 0 10px 20px;
+    position:fixed;
+    width:100%;
+    z-index:100;
+}
+
+#container-content{
+    width:1000px;
+    padding-top:100px;
+    margin-left:50%;
+    left:-450px;
+    position:relative;
+}
+#container-entities li{
+    position:relative;
+    display:inline-block;
+    float:left;
+    clear:left;
+    -webkit-transition-duration: .08s;
+    -webkit-transition-timing-function: ease-in;  
+}
+
+#container-entities li:hover{
+    left:5px;
+    -webkit-transition-duration: .08s;
+    -webkit-transition-timing-function: ease-out;
+    
+}
+#container-entities li:hover:after{
+    content: 'Click to View';
+    font-size:.7em;
+    position:absolute;
+    right:25px;
+    bottom:27px;
+    color:#9a9a9a;
+}
+
+#container-entities li:nth-child(1),
+#container-entities li:nth-child(2){
+    max-width:630px; /* This is so that if the first or second element are extra long, they wrap, rather than push down below the ad -- this is not the best solution I don't think */
+}
+#container-entities .entry{
+    display: block;
+}
+#container-entities .data{
+    display:inline-block;
+    padding-right:200px;
+    background-color:white;
+    background: rgb(255, 255, 255);
+    /*background: rgba(255, 255, 255, 0.6);*/
+    padding:10px;
+    padding-left:150px;
+    border-left:8px solid #4068d7;
+    margin-bottom:50px;
+    max-width:100%;
+    margin-right:20px;
+    box-shadow: 0px 2px 3px #9a9a9a;
+    
+}
+#container-entities .no-thumbnail .data{
+    padding-left:15px;   
+}
+#container-entities .thumbnail img{
+    border: 5px solid white;
+    box-shadow: 0px 2px 3px #9a9a9a;
+    max-width:120px;
+    max-height:120px;
+    height: auto;
+}
+#container-entities .thumbnail{
+    position:absolute;
+    top:-10px;   
+    left:16px
+}
+#container-entities .image .thumbnail{
+    top:-22px;   
+}
+
+.ad{
+    background-color:#d8d8d8;
+    width:350px;
+    height:200px;
+    padding:10px;
+    float:right
+}
+
+a.thumbnail,
+a.data{
+    text-decoration:none;   
+}
+
+span[data-href]{
+    color:#4068d7;
+    text-decoration:underline;   
+}
+
+.data h2{
+    color:black;
+    font-size:1.4em;
+    font-weight:600;
+    line-height:1em;
+    margin-bottom:5px;
+}
+
+.article .data h2:before,
+.image .data h2:before,
+.video .data h2:before,
+.social .data h2:before{
+    content : '';
+    width:20px;
+    height:22px;
+    position:relative;
+    top:4px;
+    display:inline-block;
+    margin-right:8px;
+    background-image: url('../img/sporklist-sprite.png');
+}
+
+.article .data h2:before{
+    background-position:2px -25px;
+}
+
+.image .data h2:before{
+    background-position:0px -48px;
+}
+.image {
+    margin-bottom: 20px;
+}
+.video .data h2:before{
+    background-position:3px -1px;
+}
+
+.social .data h2:before{
+    background-position:-1px -74px;
+}
+
+.data .supplementary{
+    color:#b5b5b5;
+    font-size:.7em;
+    font-style:italic;
+    display:block;
+}
+
+a.data:visited h2,
+a.data:visited span[data-href]{
+    color:grey;
+}
