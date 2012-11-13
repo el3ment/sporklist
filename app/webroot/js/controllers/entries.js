@@ -13,6 +13,7 @@ $.when(
                 onInit : function(e, data){ },
                 onView : function(e, data){
                     data.selector.addClass('read');
+                    //google tracking _trackEvent('entries', 'onView', articleType?, itemRanking?, false)
                 }
             }
         },

@@ -22,7 +22,7 @@
         
             case 'article': ?>
                 <li data-controller='entries' data-action='view' data-id='<?php echo $entry['id'] ?>' data-id='<?php echo $entry['id'] ?>' class='article <?php if(!$entry['thumbnail']){ echo 'no-thumbnail'; } ?> <?php echo ($entry['isRead'] ? 'read' : '') ?>'>
-                    <a class='entry ' href='<?php echo $this->Html->url(array('controller' => 'entries', 'action' => 'view', urlencode(urlencode($entry['link'])))); ?>'>
+                    <a class='entry ' target='_blank' href='<?php echo $this->Html->url(array('controller' => 'entries', 'action' => 'view', urlencode(urlencode($entry['link'])))); ?>'>
                         <?php if($entry['thumbnail']){ ?>
                             <div class='thumbnail'><img src='<?php echo $entry['thumbnail']['url'] ?>' alt=''></div>
                         <?php } ?>
@@ -46,7 +46,7 @@
                     $hashtagString = implode(' ', $hashtagArray);
                 ?>
                 <li data-controller='entries' data-action='view' data-id='<?php echo $entry['id'] ?>' data-id='<?php echo $entry['id'] ?>' class='image <?php if(!$entry['thumbnail']){ echo 'no-thumbnail'; } ?> <?php echo ($entry['isRead'] ? 'read' : '') ?>'>
-                    <a class='entry' href='<?php echo $this->Html->url(array('controller' => 'entries', 'action' => 'view', urlencode(urlencode($entry['link'])))); ?>'>
+                    <a class='entry' target='_blank' href='<?php echo $this->Html->url(array('controller' => 'entries', 'action' => 'view', urlencode(urlencode($entry['link'])))); ?>'>
                     <?php if($entry['thumbnail']){ ?>
                         <div class='thumbnail'><img width='120' height='120' src='<?php echo $entry['thumbnail']['url'] ?>' alt=''></div>
                     <?php } ?>
@@ -62,7 +62,7 @@
             case 'video': ?>
                 
                 <li data-controller='entries' data-action='view' data-id='<?php echo $entry['id'] ?>' data-id='<?php echo $entry['id'] ?>' class='video <?php if(!$entry['thumbnail']){ echo 'no-thumbnail'; } ?> <?php echo ($entry['isRead'] ? 'read' : '') ?>'>
-                    <a class='entry' href='<?php echo $this->Html->url(array('controller' => 'entries', 'action' => 'view', urlencode(urlencode($entry['link'])))); ?>'>
+                    <a class='entry' target='_blank' href='<?php echo $this->Html->url(array('controller' => 'entries', 'action' => 'view', urlencode(urlencode($entry['link'])))); ?>'>
                         <?php if($entry['thumbnail']){ ?>
                             <div class='thumbnail'><img src='<?php echo $entry['thumbnail']['url'] ?>' alt=''></div>
                         <?php } ?>
@@ -76,7 +76,7 @@
             case 'social': ?>
                 
                 <li data-controller='entries' data-action='view' data-id='<?php echo $entry['id'] ?>' data-id='<?php echo $entry['id'] ?>' class='social <?php if(!$entry['thumbnail']){ echo 'no-thumbnail'; } ?> <?php echo ($entry['isRead'] ? 'read' : '') ?>'>
-                    <a class='entry' href='<?php echo $this->Html->url(array('controller' => 'entries', 'action' => 'view', urlencode(urlencode($entry['link'])))); ?>'>
+                    <a class='entry' target='_blank' href='<?php echo $this->Html->url(array('controller' => 'entries', 'action' => 'view', urlencode(urlencode($entry['link'])))); ?>'>
                         <?php if($entry['thumbnail']){ ?>
                             <div class='thumbnail'><img src='<?php echo $entry['thumbnail']['url'] ?>' alt=''></div>
                         <?php } ?>

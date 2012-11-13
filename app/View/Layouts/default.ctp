@@ -25,6 +25,7 @@
         <?php echo $this->element('sql_dump'); ?>
     </div>
     <?php
+        echo $this->Html->script(array('http://www.google-analytics.com/ga.js'));
         echo $this->Html->script(array('vendors/jQuery/jquery-1.8.2.js', 'vendors/jCookie/jcookie.js', 'vendors/Handlebars/handlebars-1.js', 'utilities/global.js'));
         echo $this->Html->script(array('controllers/application.js'));
         echo $this->Html->script(array('controllers/'. strtolower($this->params['controller'])));

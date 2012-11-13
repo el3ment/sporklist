@@ -19,7 +19,7 @@ class EntriesController extends Controller {
         }
         $history[] = $id;
         $history = array_unique($history);
-        if(count($history) > 12){
+        if(count($history) > 100){
             unset($history[0]);
         }
         $this->Cookie->write('history', $history);
@@ -27,7 +27,7 @@ class EntriesController extends Controller {
     
     function view($id){
        $url = urldecode(urldecode($id));
-       $id = md5($url);
+       $id = $url;
        
        $this->_addToHistory($id);
        $this->redirect($url);
@@ -59,7 +59,7 @@ class EntriesController extends Controller {
                     
                     $description = (isset($feedItem['description']) ? html_entity_decode($feedItem['description']) : '');
                     $date = $feedItem['pubDate'];
-                    $id = md5($link);
+                    $id = $link;
                     $author = isset($feedItem['author']) ? $feedItem['author'] : null;
                     $sourceUrl = parse_url($link);
                     if(!isset($sourceUrl['host'])){
@@ -106,6 +106,8 @@ class EntriesController extends Controller {
                             break;
                         case 'cougarupdate.com':
                         case 'deepshadesofblue.com':
+                        case 'sltrib.com':
+                        case 'cbssports.com':
                             $thumbnail = null;
                             break;
                     }
