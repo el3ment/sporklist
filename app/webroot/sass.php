@@ -17,7 +17,7 @@
  *   Note: The generated links are to the <pre>webroot/ccss</pre> directory,
  *   so URLs in your stylesheets must be relative this.
  * 
- * @author			Chris Yates <chris.l.yates@gmail.com>
+ * @author    		Chris Yates <chris.l.yates@gmail.com>
  * @copyright 	Copyright (c) 2010 PBM Web Development
  * @license			http://phamlp.googlecode.com/files/license.txt
  * @package			PHamlP
@@ -111,8 +111,7 @@ if (file_exists($sassFile)) {
 		}
 	} // foreach
 	
-	App::import('Vendor', 'SassParser', array('file'=>'sass'.DS.'SassParser.php'));
-	
+	App::import('Vendor', 'PHPSass', array('file'=>'phpsass'.DS.'SassParser.php'));
 	$parser = new SassParser($options);
 	echo $parser->toCss($sassFile);
 }
@@ -122,7 +121,7 @@ elseif (file_exists($cssFile)) {
 }
 // If no Sass or CSS then die
 else {
-	die('/* No Sass or CSS file found. */');
+	die('No Sass or CSS file found.');
 }
 ob_end_flush();
 die();
