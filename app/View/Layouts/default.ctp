@@ -9,7 +9,6 @@
 		echo $this->Html->meta('icon');
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
-		echo $this->fetch('script');
         echo $this->Html->css(array('http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600', 'reset', 'base'));
 	?>
 </head>
@@ -25,6 +24,17 @@
 	<div class='testing-sqlDump'>
         <?php echo $this->element('sql_dump'); ?>
     </div>
+    <?php
+        echo $this->Html->script(array('vendors/jQuery/jquery-1.8.2.js', 'vendors/jCookie/jcookie.js', 'vendors/Handlebars/handlebars-1.js', 'utilities/global.js'));
+        echo $this->Html->script(array('controllers/application.js'));
+        echo $this->Html->script(array('controllers/'. strtolower($this->params['controller'])));
+        
+        if(is_file(WWW_ROOT.'js'.DS.'controllers'.DS.strtolower($this->params['controller']) .DS. strtolower($this->params['action'].'.js'))){
+            echo $this->Html->script(array('controllers/'. strtolower($this->params['controller']) .'/'. strtolower($this->params['action'])));
+        }
+        
+        echo $this->fetch('script');
+    ?>
 </body>
 </html>
 

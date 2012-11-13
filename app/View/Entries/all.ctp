@@ -21,14 +21,14 @@
         <?php switch($entry['type']){ 
         
             case 'article': ?>
-                <li class='article <?php if(!$entry['thumbnail']){ echo 'no-thumbnail'; } ?>'>
-                    <a class='entry' href='<?php echo $entry['link'] ?>'>
+                <li data-controller='entries' data-action='view' data-id='<?php echo $entry['id'] ?>' data-id='<?php echo $entry['id'] ?>' class='article <?php if(!$entry['thumbnail']){ echo 'no-thumbnail'; } ?> <?php echo ($entry['isRead'] ? 'read' : '') ?>'>
+                    <a class='entry ' href='<?php echo $this->Html->url(array('controller' => 'entries', 'action' => 'view', urlencode(urlencode($entry['link'])))); ?>'>
                         <?php if($entry['thumbnail']){ ?>
                             <div class='thumbnail'><img src='<?php echo $entry['thumbnail']['url'] ?>' alt=''></div>
                         <?php } ?>
                         <div class='data'>
                             <h2><?php echo $entry['title'] ?></h2>
-                            <span class='supplementary'><?php echo $timeString ?> <?php if($entry['author']){ ?>by <span class='source' data-href='<?php echo $entry['author'] ?>'><?php echo $entry['author'] ?></span><?php } ?> from <span class='source' data-href='<?php echo $entry['link'] ?>'><?php echo $entry['source'] ?></span></span>
+                            <span class='supplementary'><?php echo $timeString ?> <?php if($entry['author']){ ?>by <span class='source' data-href='<?php echo $entry['author'] ?>'><?php echo $entry['author'] ?></span><?php } ?> from <span class='source' data-href='<?php echo $this->Html->url(array('controller' => 'entries', 'action' => 'view', urlencode(urlencode($entry['link'])))); ?>'><?php echo $entry['source'] ?></span></span>
                         </div>
                     </a>
                 </li>
@@ -45,14 +45,14 @@
                     }
                     $hashtagString = implode(' ', $hashtagArray);
                 ?>
-                <li class='image <?php if(!$entry['thumbnail']){ echo 'no-thumbnail'; } ?>'>
-                    <a class='entry' href='<?php echo $entry['link'] ?>'>
+                <li data-controller='entries' data-action='view' data-id='<?php echo $entry['id'] ?>' data-id='<?php echo $entry['id'] ?>' class='image <?php if(!$entry['thumbnail']){ echo 'no-thumbnail'; } ?> <?php echo ($entry['isRead'] ? 'read' : '') ?>'>
+                    <a class='entry' href='<?php echo $this->Html->url(array('controller' => 'entries', 'action' => 'view', urlencode(urlencode($entry['link'])))); ?>'>
                     <?php if($entry['thumbnail']){ ?>
                         <div class='thumbnail'><img width='120' height='120' src='<?php echo $entry['thumbnail']['url'] ?>' alt=''></div>
                     <?php } ?>
                         <div class='data'>
-                            <h2><?php echo ($entry['title'] == 'Untitled' ? $entry['title'] : '"' . $entry['title'] . '"'); ?></h2>
-                            <span class='supplementary'>by @<span class='author' data-href='<?php echo $entry['link'] ?>'><?php echo $entry['author'] ?></span> on <span class='source' data-href='<?php echo $entry['link'] ?>'><?php echo $entry['source'] ?></span> <?php echo $hashtagString. ' ' ?></span>
+                            <h2><?php echo ($title == 'Untitled' ? $title : '"' . $title . '"'); ?></h2>
+                            <span class='supplementary'>by @<span class='author' data-href='<?php echo $this->Html->url(array('controller' => 'entries', 'action' => 'view', urlencode(urlencode($entry['link'])))); ?>'><?php echo $entry['author'] ?></span> on <span class='source' data-href='<?php echo $this->Html->url(array('controller' => 'entries', 'action' => 'view', urlencode(urlencode($entry['link'])))); ?>'><?php echo $entry['source'] ?></span> <?php echo $hashtagString. ' ' ?></span>
                             <span class='supplementary'><?php echo $timeString ?></span>
                         </div>
                     </a>
@@ -61,28 +61,28 @@
             <?php break;
             case 'video': ?>
                 
-                <li class='video <?php if(!$entry['thumbnail']){ echo 'no-thumbnail'; } ?>'>
-                    <a class='entry' href='<?php echo $entry['link'] ?>'>
+                <li data-controller='entries' data-action='view' data-id='<?php echo $entry['id'] ?>' data-id='<?php echo $entry['id'] ?>' class='video <?php if(!$entry['thumbnail']){ echo 'no-thumbnail'; } ?> <?php echo ($entry['isRead'] ? 'read' : '') ?>'>
+                    <a class='entry' href='<?php echo $this->Html->url(array('controller' => 'entries', 'action' => 'view', urlencode(urlencode($entry['link'])))); ?>'>
                         <?php if($entry['thumbnail']){ ?>
                             <div class='thumbnail'><img src='<?php echo $entry['thumbnail']['url'] ?>' alt=''></div>
                         <?php } ?>
                         <div class='data'>
                             <h2><?php echo $entry['title'] ?></h2>
-                            <span class='supplementary'><?php echo $timeString ?> from <span class='source' data-href='<?php echo $entry['link'] ?>'><?php echo $entry['source'] ?></span></span>
+                            <span class='supplementary'><?php echo $timeString ?> from <span class='source' data-href='<?php echo $this->Html->url(array('controller' => 'entries', 'action' => 'view', urlencode(urlencode($entry['link'])))); ?>'><?php echo $entry['source'] ?></span></span>
                         </div>
                     </a>
                 </li>
             <?php break;
             case 'social': ?>
                 
-                <li class='social <?php if(!$entry['thumbnail']){ echo 'no-thumbnail'; } ?>'>
-                    <a class='entry' href='<?php echo $entry['link'] ?>'>
+                <li data-controller='entries' data-action='view' data-id='<?php echo $entry['id'] ?>' data-id='<?php echo $entry['id'] ?>' class='social <?php if(!$entry['thumbnail']){ echo 'no-thumbnail'; } ?> <?php echo ($entry['isRead'] ? 'read' : '') ?>'>
+                    <a class='entry' href='<?php echo $this->Html->url(array('controller' => 'entries', 'action' => 'view', urlencode(urlencode($entry['link'])))); ?>'>
                         <?php if($entry['thumbnail']){ ?>
                             <div class='thumbnail'><img src='<?php echo $entry['thumbnail']['url'] ?>' alt=''></div>
                         <?php } ?>
                         <div class='data'>
                             <h2><?php echo ($entry['title'] == 'Untitled' ? $entry['title'] : '"' . $entry['title'] . '"'); ?></h2>
-                            <span class='supplementary'><?php echo $timeString ?> on <span class='source' data-href='<?php echo $entry['link'] ?>'><?php echo $entry['source'] ?></span></span>
+                            <span class='supplementary'><?php echo $timeString ?> on <span class='source' data-href='<?php echo $this->Html->url(array('controller' => 'entries', 'action' => 'view', urlencode(urlencode($entry['link'])))); ?>'><?php echo $entry['source'] ?></span></span>
                         </div>
                     </a>
                 </li>

@@ -142,6 +142,8 @@ span[data-href]{
     margin-bottom:5px;
 }
 
+
+
 .article .data h2:before,
 .image .data h2:before,
 .video .data h2:before,
@@ -179,6 +181,16 @@ span[data-href]{
     font-size:.7em;
     font-style:italic;
     display:block;
+}
+
+#container-entities .read{
+    opacity: .5;
+}
+#container-entities .read:hover{
+    opacity: 1;
+}
+#container-entities .read:hover:after{
+    content : 'Previously Read';
 }
 
 a.data:visited h2,
