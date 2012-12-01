@@ -1,5 +1,5 @@
 <div class='ad'>
-    <h2>What is a stinky fart?</h2>
+    <h2>What is a good smelling fart/h2>
     <p>Sporklist combines all local, national, and social media about your favorite sports teams and puts it all in one beautiful location.</p>
     <p>We are looking to improve - if you have any suggestions or comments please <a href='mailto:schlosser.shawn@gmail.com'>let us know</a>!</p>
 </div>
