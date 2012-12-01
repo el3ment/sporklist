@@ -1,8 +1,7 @@
 <div class='ad'>
     <h2>What is a sporklist?</h2>
-    <p>Rest easy web traveler, you have embarked upon the <strong>greatest</strong> sports service the internet has ever seen.</p>
     <p>Sporklist combines all local, national, and social media about your favorite sports teams and puts it all in one beautiful location.</p>
-    <p>Go ahead, take a gander - I <em>dare</em> you to. And if you have any suggestions, feel free to <a href='mailto:schlosser.shawn@gmail.com'>contact us</a>!</p>
+    <p>We are looking to improve - if you have any suggestions or comments please <a href='mailto:schlosser.shawn@gmail.com'>let us know</a>!</p>
 </div>
 <ul id='container-entities'>
 

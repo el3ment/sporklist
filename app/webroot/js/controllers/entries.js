@@ -11,7 +11,10 @@ $.when(
         events : {
             self : {
                 onInit : function(e, data){ },
+                onReady : function(e, data){ },
                 onView : function(e, data){
+                    $('body').addClass('loading');
+                    setTimeout(function(){ $('body').removeClass('loading') }, 500);
                     data.selector.addClass('read');
                     //google tracking _trackEvent('entries', 'onView', articleType?, itemRanking?, false)
                 }

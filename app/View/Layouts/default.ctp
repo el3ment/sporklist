@@ -12,7 +12,7 @@
         echo $this->Html->css(array('http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600', 'reset', 'base'));
 	?>
 </head>
-<body id='page-home'>
+<body id='page-home ontouchstart=''>
     <div id='container-header'>
         <div class='logo'><span class='subdomain'>byu</span>.sporklist.com</div>
     </div>
@@ -25,7 +25,6 @@
         <?php echo $this->element('sql_dump'); ?>
     </div>
     <?php
-        echo $this->Html->script(array('http://www.google-analytics.com/ga.js'));
         echo $this->Html->script(array('vendors/jQuery/jquery-1.8.2.js', 'vendors/jCookie/jcookie.js', 'vendors/Handlebars/handlebars-1.js', 'utilities/global.js'));
         echo $this->Html->script(array('controllers/application.js'));
         echo $this->Html->script(array('controllers/'. strtolower($this->params['controller'])));
@@ -36,6 +35,19 @@
         
         echo $this->fetch('script');
     ?>
+    <script type="text/javascript">
+    
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36242457-1']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+    </script>
 </body>
 </html>
 

@@ -1,4 +1,5 @@
 $blue : #4068d7;
+$grey : #6e6e6e;
 $desktopWidth : 1000px;
 
 
@@ -9,10 +10,14 @@ html{
 body{
     background:transparent;
     font-family: 'Source Sans Pro', 'Myriad Pro', sans-serif;
+    font-size:1em;
+    @media screen and (max-width: $desktopWidth) {
+        font-size:1em;
+    }
 }
 p{
  text-indent: 1em;   
- font-size:.8em;
+ font-size:80%;
  margin-bottom:1em;
 }
 em{
@@ -24,14 +29,12 @@ strong{
 
 
 
-
-
 .ad{
     background-color:#d8d8d8;
     width:350px;
     padding:10px;
     float:right;
-    color:#6e6e6e;
+    color:$grey;
     @media screen and (max-width: $desktopWidth) {
         float: none;
         margin:0px 10px 45px 10px;
@@ -42,7 +45,7 @@ strong{
     color: #535353;
     font-weight:bold;  
     margin-bottom:.2em;
-    font-size:1.2em
+    font-size:110%;
 }
 
 
@@ -52,15 +55,15 @@ strong{
 #container-header{
     background: black url('../img/stressed_linen.png');
     color:white;
-    height:55px;
-    padding:10px 0 10px 20px;
+    height:3.6em;
+    padding:0 0 0 1em;
     position:fixed;
     width:100%;
     z-index:100;
 }
 
 #container-header .logo{
-    font-size: 2.2em;
+    font-size: 220%;
 }
 #container-header .logo .subdomain{
     color:$blue;
@@ -72,7 +75,7 @@ strong{
 
 #container-content{
     width:$desktopWidth;
-    padding-top:100px;
+    padding-top:4.5em;
     margin: 0px auto;
     position:relative;
     @media screen and (max-width: $desktopWidth) {
@@ -95,16 +98,19 @@ strong{
 .entry{
     display: block;
     @media screen and (max-width: $desktopWidth) {
-        left:5px;
+        margin-left:1em;
     }
 }
 .entry:hover{
-    left:5px;
+    left:1em;
     -webkit-transition-duration: .08s;
     -webkit-transition-timing-function: ease-out;
     
 }
 
+.entry a{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);   
+}
 .entry a:active{
     .data{
         background-color:$blue;
@@ -115,53 +121,69 @@ strong{
 }
 
 .entry a:after{
-    font-size:.7em;
+    -webkit-transition-duration: .08s;
+    -webkit-transition-timing-function: ease-in;  
+    font-size:70%;
     position:absolute;
-    right:25px;
-    bottom:27px;
+    right:2em;
+    bottom:1em;
     color:#9a9a9a;
 }
 .entry a:hover:after{
     content: 'Click to View';
 }
-.entry.read a{
-    opacity: .5;
+.entry.read .data{
+    background-color:transparent;
+    border-left-color:transparent;
+    color:$grey;
+    margin-bottom:1em;
+    margin-top:0;
+    box-shadow:0 0 0 0;
 }
-.entry.read a:after{
-    @media screen and (max-width: $desktopWidth) {
-        content: 'Previously Read';
-    }
-}
-.entry.read a:hover{
-    opacity: 1;
+.entry.read .data h2{
+    color:$grey;
 }
 .entry.read a:hover:after{
     content : 'Previously Read';
 }
 
 .entry:nth-child(1),
-.entry:nth-child(2){
+.entry:nth-child(2),
+.entry:nth-child(3){
     @media screen and (min-width: $desktopWidth) {
        max-width:630px; /* This is so that if the first or second element are extra long, they wrap, rather than push down below the ad -- this is not the best solution I don't think */
     }
 }
 
-.entry .data{
+.entry .data,
+.entry.read:hover .data{
     display:inline-block;
     padding-right:200px;
     background-color:white;
     background: rgb(255, 255, 255);
     /*background: rgba(255, 255, 255, 0.6);*/
     padding:10px;
-    padding-left:150px;
+    padding-left:9.5em;
     border-left:8px solid #4068d7;
-    margin-bottom:50px;
+    margin-bottom:2em;
     max-width:100%;
-    margin-right:20px;
+    margin-right:1em;
     box-shadow: 0px 2px 3px #9a9a9a;
+    @media screen and (max-width: $desktopWidth) {
+        padding-left:6.5em;
+    }
+    
+    -webkit-transition-duration: .08s;
+    -webkit-transition-timing-function: ease-in;  
 }
-.entry.no-thumbnail .data{
-    padding-left:15px;   
+.entry.read .data,
+.entry.read:hover .data{
+    padding-left:6em;
+}
+.entry.no-thumbnail .data,
+.entry.read.no-thumbnail .data,
+.entry.read.no-thumbnail:hover .data{
+    padding-left:1em;   
 }
 
 .entry .thumbnail{
@@ -170,31 +192,48 @@ strong{
     left:16px
 }
 .entry .thumbnail img{
-    border: 5px solid white;
+    border: .4em solid white;
     box-shadow: 0px 2px 3px #9a9a9a;
-    max-width:120px;
-    max-height:120px;
+    max-width:7.25em;
+    max-height:7.25em;
     height: auto;
+    @media screen and (max-width: $desktopWidth) {
+        max-width:5em;   
+    }
+    
 }
 .entry.image .thumbnail{
     top:-22px;   
 }
 
+.entry.read .thumbnail img{
+    max-width:4em;
+    max-height:4em;
+    border-width:.2em;
+    @media screen and (max-width: $desktopWidth){
+        max-width:2.5em;   
+    }
+}
 
-
+.entry.image.read .thumbnail{
+    top:.3em;
+}
 
 .entry .data h2{
     color:black;
-    font-size:1.4em;
+    font-size:140%;
     font-weight:600;
     line-height:1em;
     margin-bottom:5px;
 }
 .entry .data .supplementary{
-    color:#b5b5b5;
-    font-size:.7em;
+    color:$grey;
+    font-size:70%;
     font-style:italic;
     display:block;
+}
+.entry:active .data .supplementary{
+    color:#FFFFFF;
 }
 .entry .data .supplementary span[data-href]{
     color:#4068d7;
@@ -224,9 +263,6 @@ strong{
 .entry.image .data h2:before{
     background-position:0px -48px;
 }
-.entry.image {
-    margin-bottom: 20px;
-}
 .entry.video .data h2:before{
     background-position:3px -1px;
 }
@@ -235,3 +271,11 @@ strong{
     background-position:-1px -74px;
 }
 
+.entry.image{
+    margin-top:1em;
+    margin-bottom:1em;
+}
+.entry.read.image{
+    margin-top:0;
+    margin-bottom:0;
+}
