@@ -88,6 +88,7 @@ strong{
 
 
 .entry{
+    max-width: 630px;
     position:relative;
     display:inline-block;
     float:left;
@@ -278,4 +279,8 @@ strong{
 .entry.read.image{
     margin-top:0;
     margin-bottom:0;
+}
+
+.testing-sqlDump{
+    display: none;
 }
