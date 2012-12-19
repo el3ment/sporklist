@@ -62,10 +62,10 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'localhost',
-		'login' => 'el3ment_marengo',
-		'password' => 'marengo123!@#456$%^',
-		'database' => 'el3ment_marengo',
+		'host' => 'esteadibe0.database.windows.net',
+		'login' => 'marengo_app',
+		'password' => 'shawnROBERT123!@#',
+		'database' => 'sporklistSQL',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
