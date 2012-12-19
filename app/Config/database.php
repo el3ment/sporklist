@@ -62,7 +62,7 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'vocabmi.com',
+		'host' => 'localhost',
 		'login' => 'el3ment_marengo',
 		'password' => 'marengo123!@#456$%^',
 		'database' => 'el3ment_marengo',

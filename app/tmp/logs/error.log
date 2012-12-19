@@ -3392,3 +3392,24 @@
 #3 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(EntriesController), Object(CakeRequest), Object(CakeResponse))
 #4 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/app/webroot/index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2012-12-18 21:01:41 Error: [MissingControllerException] Controller class Index.phpController could not be found.
+#0 /var/lib/stickshift/b1c8d678c0344b71a493e31832e70637/app-root/data/345479/app/webroot/index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-12-18 21:01:42 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/lib/stickshift/b1c8d678c0344b71a493e31832e70637/app-root/data/345479/app/webroot/index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-12-18 21:01:44 Error: [MissingControllerException] Controller class Index.phpController could not be found.
+#0 /var/lib/stickshift/b1c8d678c0344b71a493e31832e70637/app-root/data/345479/app/webroot/index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-12-18 21:01:44 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/lib/stickshift/b1c8d678c0344b71a493e31832e70637/app-root/data/345479/app/webroot/index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-12-18 21:01:45 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /var/lib/stickshift/b1c8d678c0344b71a493e31832e70637/app-root/data/345479/app/webroot/index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-12-18 21:01:46 Error: [MissingControllerException] Controller class Index.phpController could not be found.
+#0 /var/lib/stickshift/b1c8d678c0344b71a493e31832e70637/app-root/data/345479/app/webroot/index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-12-18 21:01:46 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/lib/stickshift/b1c8d678c0344b71a493e31832e70637/app-root/data/345479/app/webroot/index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
