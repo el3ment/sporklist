@@ -10,15 +10,14 @@ class EntriesController extends Controller {
     
     function viewAllByDomain($sourceDomain = 'cnn.com'){
         
-        $entries = $this->Entries->findBySourcedomain($sourceDomain);
-        if($entries['Entries']){ $entries = array($entries); }
+        $entries = $this->Entries->findAllBySourcedomain($sourceDomain);
         
         $this->set('entries', $entries);
         $this->render('all');
     }
     
     function all($page = 0){
-        $entries = $this->Entries->find('all', array('order' => 'Entries.date DESC', 'limit' => 10, 'page' => $page));
+        $entries = $this->Entries->find('all', array('order' => 'Entries.date DESC', 'limit' => 100, 'page' => $page));
         $this->set('entries', $entries);
     }
 }
