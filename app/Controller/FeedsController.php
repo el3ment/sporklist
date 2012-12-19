@@ -3,10 +3,9 @@ class FeedsController extends Controller {
     var $name = 'Feeds';
     var $uses = array('Entries');
     
-    var $primaryFeedUrl = 'http://pipes.yahoo.com/pipes/pipe.run?_id=972140ac54b27166f7d66abc0c1da269&_render=rss';
-    //var $socialFeedUrl = 'http://pipes.yahoo.com/pipes/pipe.run?_id=ffa7faeb6922ae5f20c3db53276c0146&_render=rss';
-    //var $nationalFeedUrl = 'http://pipes.yahoo.com/pipes/pipe.run?_id=0c23e1cd0998d792fdd847948f3f2df1&_render=rss';
-    //var $localFeedUrl = 'http://pipes.yahoo.com/pipes/pipe.run?_id=684e1289175e867d0722b34301605398&_render=rss';
+    var $feedUrls = array('social' => 'http://pipes.yahoo.com/pipes/pipe.run?_id=ffa7faeb6922ae5f20c3db53276c0146&_render=rss',
+                          'national' => 'http://pipes.yahoo.com/pipes/pipe.run?_id=0c23e1cd0998d792fdd847948f3f2df1&_render=rss',
+                          'local' => 'http://pipes.yahoo.com/pipes/pipe.run?_id=684e1289175e867d0722b34301605398&_render=rss');
     
     // From StackOverflow
     function _multidimentionalImplode($array){
@@ -183,18 +182,23 @@ class FeedsController extends Controller {
     }
     
     function download(){
-
-        $rawItems = $this->_readData($this->primaryFeedUrl);
         
-        foreach($rawItems as $rawItem){
-            $parsedItem = $this->_parseItem($rawItem);
-            if($parsedItem){
-                $parsedItem['sourceFeed'] = $this->primaryFeedUrl;
-                $saveData = array('Entries' => $parsedItem);
-                $this->Entries->create();
-                $this->Entries->save($saveData);
-            }
+        
+        foreach($this->feedUrls as $feedType => $feedUrl){
             
+            $rawItems = $this->_readData($feedUrl);
+        
+            foreach($rawItems as $rawItem){
+                $parsedItem = $this->_parseItem($rawItem);
+                if($parsedItem){
+                    $parsedItem['sourceFeed'] = $feedUrl;
+                    $parsedItem['sourceFeedType'] = $feedType;
+                    $saveData = array('Entries' => $parsedItem);
+                    $this->Entries->create();
+                    $this->Entries->save($saveData);
+                }
+                
+            }
         }
         
     }

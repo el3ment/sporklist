@@ -3289,3 +3289,106 @@
 2012-12-18 19:44:41 Error: [MissingControllerException] Controller class JsController could not be found.
 #0 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/app/webroot/index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2012-12-18 19:58:46 Error: [MissingViewException] View file "/var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/app/View/Feeds/download.ctp" is missing.
+#0 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(FeedsController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/app/webroot/index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-18 19:58:47 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/app/webroot/index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-12-18 20:01:34 Error: [MissingViewException] View file "/var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/app/View/Feeds/download.ctp" is missing.
+#0 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(FeedsController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/app/webroot/index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-18 20:11:15 Error: Fatal Error (4): syntax error, unexpected '}' in [/var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/app/Controller/EntriesController.php, line 7]
+2012-12-18 20:11:15 Error: [FatalErrorException] syntax error, unexpected '}'
+#0 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/lib/sticks...', 7)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/lib/sticks...', 7, Array)
+#2 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/lib/sticks...', 7, Array)
+#3 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-18 20:11:27 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Entries.date DESC' in 'field list'
+#0 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('SELECT `Entries...', Array)
+#2 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT `Entries...', Array, Array)
+#3 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Model/Datasource/DboSource.php(1080): DboSource->fetchAll('SELECT `Entries...', false)
+#4 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Model/Model.php(2630): DboSource->read(Object(Entries), Array)
+#5 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Model/Datasource/DboSource.php(593): Model->find('all', Array)
+#6 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Model/Model.php(784): DboSource->query('findAllBySource...', Array, Object(Entries))
+#7 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/app/Controller/EntriesController.php(29): Model->__call('findAllBySource...', Array)
+#8 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/app/Controller/EntriesController.php(29): Entries->findAllBySourcefeedtype('social', Array)
+#9 [internal function]: EntriesController->viewAllByFeedType('social', '2')
+#10 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(EntriesController), Array)
+#11 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#12 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(EntriesController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/app/webroot/index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2012-12-18 20:14:46 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Entries.date DESC, `limit` 100, `page` 2' at line 1
+#0 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Model/Datasource/DboSource.php(459): PDOStatement->execute(Array)
+#1 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Model/Datasource/DboSource.php(425): DboSource->_execute('SELECT `Entries...', Array)
+#2 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Model/Datasource/DboSource.php(669): DboSource->execute('SELECT `Entries...', Array, Array)
+#3 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Model/Datasource/DboSource.php(1080): DboSource->fetchAll('SELECT `Entries...', false)
+#4 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Model/Model.php(2630): DboSource->read(Object(Entries), Array)
+#5 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Model/Datasource/DboSource.php(593): Model->find('all', Array)
+#6 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Model/Model.php(784): DboSource->query('findAllBySource...', Array, Object(Entries))
+#7 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/app/Controller/EntriesController.php(29): Model->__call('findAllBySource...', Array)
+#8 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/app/Controller/EntriesController.php(29): Entries->findAllBySourcefeedtype('social', Array, Array)
+#9 [internal function]: EntriesController->viewAllByFeedType('social', '2')
+#10 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(EntriesController), Array)
+#11 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Routing/Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#12 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(EntriesController), Object(CakeRequest), Object(CakeResponse))
+#13 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/app/webroot/index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2012-12-18 20:22:43 Error: Fatal Error (4): syntax error, unexpected ';' in [/var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/app/View/Entries/all.ctp, line 92]
+2012-12-18 20:22:43 Error: [FatalErrorException] syntax error, unexpected ';'
+#0 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/lib/sticks...', 92)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/lib/sticks...', 92, Array)
+#2 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/lib/sticks...', 92, Array)
+#3 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-18 20:22:56 Error: Fatal Error (1): Unsupported operand types in [/var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Routing/Router.php, line 751]
+2012-12-18 20:22:56 Error: [FatalErrorException] Unsupported operand types
+#0 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Unsupported ope...', '/var/lib/sticks...', 751)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', '/var/lib/sticks...', 751, Array)
+#2 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', '/var/lib/sticks...', 751, Array)
+#3 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-18 20:23:17 Error: Fatal Error (1): Unsupported operand types in [/var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Routing/Router.php, line 751]
+2012-12-18 20:23:17 Error: [FatalErrorException] Unsupported operand types
+#0 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Unsupported ope...', '/var/lib/sticks...', 751)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', '/var/lib/sticks...', 751, Array)
+#2 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', '/var/lib/sticks...', 751, Array)
+#3 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-18 20:23:45 Error: Fatal Error (1): Unsupported operand types in [/var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Routing/Router.php, line 751]
+2012-12-18 20:23:45 Error: [FatalErrorException] Unsupported operand types
+#0 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Error/ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Unsupported ope...', '/var/lib/sticks...', 751)
+#1 [internal function]: ErrorHandler::handleError(1, 'Unsupported ope...', '/var/lib/sticks...', 751, Array)
+#2 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Unsupported ope...', '/var/lib/sticks...', 751, Array)
+#3 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2012-12-18 20:33:34 Error: [MissingViewException] View file "/var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/app/View/Entries/view_all_by_feed_type.ctp" is missing.
+#0 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(EntriesController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/app/webroot/index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2012-12-18 20:37:25 Error: [MissingViewException] View file "/var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/app/View/Entries/viewall_by_domain.ctp" is missing.
+#0 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/View/View.php(473): View->_getViewFileName(NULL)
+#1 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Controller/Controller.php(956): View->render(NULL, NULL)
+#2 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Routing/Dispatcher.php(193): Controller->render()
+#3 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/lib/Cake/Routing/Dispatcher.php(161): Dispatcher->_invoke(Object(EntriesController), Object(CakeRequest), Object(CakeResponse))
+#4 /var/lib/stickshift/14719a2996d2432181e918ea46c0ba6a/app-root/data/325865/app/webroot/index.php(99): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
